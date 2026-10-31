@@ -184,7 +184,8 @@ button:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-v
 .score .tot small{font-size:.55em}
 .chip{white-space:nowrap;display:inline-block;padding:3px 9px;border-radius:8px;font-weight:900;font-size:.9rem;border:2px solid rgba(0,0,0,.25);background:#e9d6aa;color:#4a280c}
 .chip.pos{background:#3f9a3a;color:#fff}.chip.neg{background:#c0352d;color:#fff}.chip.zero{background:#b9a27a;color:#fff}
-.score .meta{display:flex;flex-direction:column;align-items:flex-start;gap:4px;font-size:.78rem;font-weight:800;color:var(--ink-soft)}
+.score .meta{display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-width:0;font-size:.78rem;font-weight:800;color:var(--ink-soft)}
+.btns{display:contents}
 .acts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 10px}
 .acts .plank{min-height:58px;font-size:1.35rem}
 .bonus{display:grid;grid-template-columns:2fr 1fr;gap:8px;margin:8px 10px 0}
@@ -208,6 +209,63 @@ button:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-v
 .floater.neg{color:#ffd6cf}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
+
+.stake{display:flex;align-items:center;gap:10px;padding:6px 14px 6px 8px;color:#4a280c;text-align:left;cursor:pointer;font:inherit}
+.stake img{height:46px;width:auto;filter:drop-shadow(0 2px 2px rgba(0,0,0,.35))}
+.stake small{display:block;font-weight:900;font-size:.72rem;color:#7a5530;text-transform:uppercase;letter-spacing:.4px}
+.stake b{display:block;font-family:var(--display);font-weight:400;font-size:1.6rem;line-height:1}
+.stake .edit{font-size:1rem;opacity:.6;margin-left:2px}
+.stake.bonus{box-shadow:0 0 0 3px #ffd24d,inset 0 0 0 2px #f8dca0,0 4px 0 #3b210d,0 8px 14px rgba(0,0,0,.35)}
+.stakechips{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
+.stakechip{border:3px solid #8a5428;background:#f6e2b4;border-radius:12px;padding:8px 6px;font-family:var(--display);font-size:1.6rem;color:#4a280c;line-height:1.05}
+.stakechip small{display:block;font-family:var(--body);font-weight:900;font-size:.7rem;color:#7a5530}
+.stakechip[aria-pressed="true"]{background:#5a3412;color:#ffe9bb;border-color:#3b210d}
+.stakechip[aria-pressed="true"] small{color:#f0d9a8}
+.stakeprev{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-weight:800;color:#3a2210}
+.stakeprev img{height:18px;vertical-align:middle}
+
+.chestbox img{height:44px}
+.chestbig{display:flex;align-items:center;gap:16px;padding:10px 14px;border-radius:14px;background:rgba(255,250,235,.7);border:2px solid rgba(138,84,40,.35)}
+.chestbig img{width:110px;height:auto;filter:drop-shadow(0 4px 3px rgba(0,0,0,.35))}
+.chestbig b{display:block;font-family:var(--display);font-weight:400;font-size:2.6rem;line-height:1;color:#4a280c}
+.chestbig span{display:block;font-weight:800;color:var(--ink-soft);font-size:.9rem;margin-top:4px}
+.chestrow{display:grid;grid-template-columns:34px minmax(80px,140px) 1fr auto;gap:10px;align-items:center;margin:6px 0;font-weight:900;color:#3a2210}
+.chestrow img{width:34px}
+.chestrow .nm{font-family:var(--display);font-weight:400;font-size:1.1rem}
+.chestrow .bar{height:14px;border-radius:999px;background:rgba(110,75,42,.2);overflow:hidden;border:2px solid rgba(90,52,18,.4)}
+.chestrow .bar i{display:block;height:100%;border-radius:999px}
+
+.closehead{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:14px}
+.closehead p{margin:0;flex:1;min-width:260px;font-weight:700;color:var(--ink-soft)}
+.closecrew{border:3px solid var(--c);border-radius:16px;background:rgba(255,250,235,.7);padding:12px 14px;margin-bottom:16px}
+.closecrew header{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.closecrew header img{width:44px}
+.closecrew h3{margin:0;font-family:var(--display);font-weight:400;font-size:1.5rem;color:#3a2210}
+.closecrew .gp{margin-left:auto;font-weight:800;color:#5a3412;background:#fff4d8;border:2px solid rgba(90,52,18,.35);border-radius:10px;padding:4px 10px}
+.closecrew .gp b{font-family:var(--display);font-weight:400;font-size:1.15rem}
+.lvl{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:10px;font-weight:900;color:#5a3412}
+.lvl button{border:2px solid #8a5428;background:#f6e2b4;color:#5a3412;border-radius:999px;padding:3px 12px;font-weight:900;font-size:.88rem}
+.lvl button[aria-pressed="true"]{background:#2f8c34;border-color:#1d5a21;color:#fff}
+table.cltab{width:100%;border-collapse:collapse;min-width:620px}
+.cltab th{text-align:left;font-family:var(--display);font-weight:400;color:#5a3412;padding:4px 6px;font-size:1rem}
+.cltab td{padding:5px 6px;border-top:2px solid rgba(110,75,42,.18);vertical-align:middle}
+.clin{font:inherit;font-weight:800;color:#3a2210;background:#fffaf0;border:2px solid #b98c50;border-radius:9px;padding:7px 9px;width:100%;min-width:0}
+textarea.clin,.field textarea{font:inherit;font-weight:700;color:#3a2210;background:#fffaf0;border:2px solid #b98c50;border-radius:10px;padding:8px 10px;resize:vertical}
+.clin.num{width:76px;text-align:center}
+.nowrap{white-space:nowrap}
+.fin{font-family:var(--display);font-size:1.5rem;color:#3a2210;white-space:nowrap}
+.fin small{font-size:.6em;color:#7a5530}
+.mini-btn{border:2px solid #8a5428;background:#f6e2b4;color:#5a3412;border-radius:8px;padding:5px 9px;font-weight:900;font-size:.82rem;margin-left:4px}
+.mini-btn.del{background:#f3d2c8;border-color:#b0452f;color:#8a2a18}
+.mini-btn[aria-expanded="true"]{background:#5a3412;color:#ffe9bb}
+tr.detail td{background:rgba(255,244,216,.85)}
+.crit{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:6px 16px}
+.crit .q{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:4px 0;border-bottom:1px dashed rgba(110,75,42,.3)}
+.crit .q b{display:block;font-size:.9rem;color:#3a2210}
+.crit .q small{display:block;font-size:.76rem;color:#7a5530;font-weight:700}
+.seg{display:flex;gap:3px;flex:none}
+.seg button{width:34px;height:34px;border-radius:8px;border:2px solid #8a5428;background:#fffaf0;font-family:var(--display);font-size:1.05rem;color:#5a3412}
+.seg button[aria-pressed="true"]{background:#1f5fb8;border-color:#0f3a75;color:#fff}
 /* ---------- Panels / generic ---------- */
 .panel{padding:18px 20px;margin-bottom:18px}
 .panel h2{font-family:var(--display);font-weight:400;font-size:1.55rem;margin:0 0 12px;color:#4a280c;display:flex;align-items:center;gap:10px}
@@ -343,6 +401,50 @@ table.grid .crewcell img{width:34px}
   .crewedit{grid-template-columns:auto 1fr}
   .crewedit .del{grid-column:1/-1;justify-self:end}
 }
+
+/* ---- compact crew cards on phones ---- */
+@media (max-width:760px){
+  .sbar{gap:8px;margin-bottom:12px}
+  .sbar .switch{flex:1 1 100%;justify-content:space-between;padding:4px 6px}
+  .switch .lbl{font-size:1.05rem;min-width:0}
+  .switch .ico{width:32px;height:32px}
+  .arrow{width:36px;height:36px}
+  .sbar .stake{flex:1 1 0;min-width:0;padding:4px 8px 4px 6px;gap:6px}
+  .sbar .stake .edit{display:none}
+  .sbar .medal img{width:38px;height:38px}
+  .crew .status.is-empty{display:none}
+  .top{padding:6px 10px 6px 6px;margin-bottom:10px;gap:8px;flex-wrap:nowrap}
+  .top h1{display:none}
+  .top .nav{width:auto;flex:1;justify-content:space-between;margin-left:4px}
+  .stake img,.chestbox img{height:32px}
+  .stake b{font-size:1.2rem}
+  .stake small{font-size:.62rem}
+  .sbar .spacer{display:none}
+  .medal img{width:42px;height:42px}
+  .crews,.crews.n5,.crews.n6,.crews.n7,.crews.n8{grid-template-columns:1fr;gap:12px}
+  .crew{display:grid;grid-template-columns:72px minmax(0,1fr) auto;column-gap:8px;row-gap:6px;padding:0 8px 8px;
+    grid-template-areas:"rib rib rib" "sea hearts score" "sea status score" "btns btns btns"}
+  .crew .ribbon{grid-area:rib;margin:-8px 10px 0;font-size:1.05rem;padding:4px 18px 6px}
+  .crew .sea{grid-area:sea;margin:0;height:72px;width:72px;border-radius:10px;border-width:2px}
+  .crew .sea .isle{display:none}
+  .crew .sea .ship{height:96%}
+  .crew .hearts{grid-area:hearts;margin:0;min-height:0;justify-content:flex-start;gap:2px}
+  .crew .hbtn{padding:1px}
+  .crew .hbtn img,.crews.n5 .hbtn img,.crews.n6 .hbtn img,.crews.n7 .hbtn img,.crews.n8 .hbtn img{width:34px}
+  .crew .status{grid-area:status;margin:0;min-height:30px;padding:2px 8px;justify-content:flex-start}
+  .crew .status img{height:24px}
+  .crew .status .empty{font-size:.72rem}
+  .crew .score{grid-area:score;margin:0;flex-direction:column;gap:3px}
+  .crew .score .tot{font-size:1.45rem;padding:2px 8px;border-width:9px 10px;border-image-width:9px 10px}
+  .crew .score .meta{align-items:center}
+  .crew .score .meta span:not(.chip){display:none}
+  .crew .score .chip{font-size:.8rem;padding:1px 6px}
+  .crew .btns{grid-area:btns;display:grid;grid-template-columns:1fr 1fr 1.25fr .7fr;gap:6px}
+  .crew .acts,.crew .bonus{display:contents}
+  .crew .acts .plank,.crew .bonus .plank{min-height:44px;font-size:1rem;border-width:9px 10px;border-image-width:9px 10px;padding:0 2px}
+  .crew .bonus .plank{font-size:.85rem}
+  .crew .absent{grid-column:1/-1;padding:10px}
+}
 </style>
 </head>
 <body>
@@ -381,7 +483,7 @@ function signed(n){ return (n > 0 ? '+' : (n < 0 ? '−' : '')) + Math.abs(n); }
 function chipCls(n){ return n > 0 ? 'pos' : (n < 0 ? 'neg' : 'zero'); }
 
 /* ---------- state ---------- */
-function defaultSettings(){ return {base:[0,1,3,5], fairy:1, maxSkulls:2, cycle:10, sound:false}; }
+function defaultSettings(){ return {base:[0,1,3,5], fairy:1, maxSkulls:2, cycle:10, sound:false, noteMax:20, groupShare:50}; }
 function newSession(cls){
   var n = cls.sessions.length ? cls.sessions[cls.sessions.length - 1].n + 1 : 1;
   var s = {id:uid(), n:n, date:todayISO(), marks:{}};
@@ -452,8 +554,17 @@ function cls(){ var c = findBy(S.classes, 'id', S.cur.cls) || S.classes[0]; S.cu
 function sess(){ var c = cls(); var s = findBy(c.sessions, 'id', S.cur.sess) || c.sessions[c.sessions.length - 1]; S.cur.sess = s.id; return s; }
 
 /* ---------- scoring ---------- */
-function pts(m){ if (!m) return 0; return S.settings.base[m.h] + m.f * S.settings.fairy - m.p; }
 function maxPts(){ return S.settings.base[3]; }
+function stakeOf(s){ return (s && s.stake != null) ? s.stake : maxPts(); }
+function heartPts(h, s){
+  var b = S.settings.base, st = stakeOf(s);
+  if (st === b[3] || !b[3]) return b[h];
+  return Math.round(b[h] * st / b[3]);
+}
+function pts(m, s){ if (!m) return 0; return heartPts(m.h, s) + m.f * S.settings.fairy - m.p; }
+function chestSessions(c){ var from = c.chestFrom || 1; return c.sessions.filter(function(s){ return s.n >= from; }); }
+function chestTotal(c){ return stakeSum(chestSessions(c)); }
+function stakeSum(list){ var t = 0; list.forEach(function(s){ t += stakeOf(s); }); return t; }
 function cycleOf(c, s){ return Math.floor(idxBy(c.sessions, 'id', s.id) / S.settings.cycle); }
 function cycleCount(c){ return Math.ceil(c.sessions.length / S.settings.cycle); }
 function cycleSessions(c, k){
@@ -462,8 +573,9 @@ function cycleSessions(c, k){
 }
 function crewSum(list, crew){
   var t = 0, played = 0;
-  list.forEach(function(s){ var m = s.marks[crew.id]; if (m){ t += pts(m); played++; } });
-  return {total:t, played:played, target:played * maxPts()};
+  var target = 0;
+  list.forEach(function(s){ var m = s.marks[crew.id]; if (m){ t += pts(m, s); played++; target += stakeOf(s); } });
+  return {total:t, played:played, target:target};
 }
 
 /* ---------- badges ---------- */
@@ -473,7 +585,7 @@ function badgesFor(c, crew){
   var run3 = 0, runClean = 0, runAlive = 0, cumF = 0, cum = 0, prevSkull = false;
   c.sessions.forEach(function(s){
     var m = s.marks[crew.id]; if (!m) return;
-    var p = pts(m); cum += p; cumF += m.f;
+    var p = pts(m, s); cum += p; cumF += m.f;
     if (m.h === 3){ run3++; got('first3', s.n); } else run3 = 0;
     if (run3 >= 3) got('streak3', s.n);
     if (m.f >= 2) got('fairyRain', s.n);
@@ -610,6 +722,10 @@ function renderSession(){
       '<div class="lbl">Séance ' + s.n + '<small>' + (s.date ? fmtDate(s.date) + ' · ' : '') + 'bilan ' + (k + 1) + ' : ' + posInCycle + '/' + L + '</small></div>' +
       (last ? '<button class="arrow plus" data-act="newSess" aria-label="Nouvelle séance" title="Nouvelle séance">+</button>'
             : '<button class="arrow" data-act="nextSess" aria-label="Séance suivante">›</button>') + '</div>' +
+    '<button class="stake parchbox' + (stakeOf(s) !== maxPts() ? ' bonus' : '') + '" data-act="stake" title="Choisir le trésor mis en jeu" aria-label="Trésor mis en jeu : ' + stakeOf(s) + ' points. Modifier">' + img('chest') +
+      '<span><small>Trésor en jeu</small><b>' + stakeOf(s) + ' pts</b></span><span class="edit">✎</span></button>' +
+    '<button class="stake parchbox chestbox" data-act="chest" title="Coffre : points mis en jeu cumulés" aria-label="Coffre : ' + chestTotal(c) + ' points mis en jeu cumulés. Ouvrir">' + img('gems') +
+      '<span><small>Coffre · depuis S' + (c.chestFrom || 1) + '</small><b>' + chestTotal(c) + ' pts</b></span></button>' +
     '<span class="spacer"></span>' +
     '<button class="medal" data-act="undo" title="Annuler la dernière action" aria-label="Annuler la dernière action"' + (undoStack.length ? '' : ' disabled') + '>' + img('icUndo') + '</button>' +
     '<button class="medal" data-act="delSess" title="Supprimer cette séance" aria-label="Supprimer cette séance">' + img('icTrash') + '</button>' +
@@ -637,7 +753,7 @@ function crewCard(c, s, cr){
   if (m.p) st += repeatImg('skull', m.p);
   if (!st) st = '<span class="empty">Aucune fée · aucune tête de mort</span>';
   var k = cycleOf(c, s), sum = crewSum(cycleSessions(c, k).filter(function(x){ return x.n <= s.n; }), cr);
-  var p = pts(m), base = S.settings.base;
+  var p = pts(m, s);
   var minus = m.h > 0
     ? '<button class="plank red" data-act="minus" data-crew="' + cr.id + '">−1 ' + img('heart') + '</button>'
     : '<button class="plank red" data-act="minus" data-crew="' + cr.id + '"' + (m.p >= S.settings.maxSkulls ? ' disabled' : '') + '>−1 ' + img('skull') + '</button>';
@@ -646,12 +762,12 @@ function crewCard(c, s, cr){
     : '<button class="plank green" data-act="plus" data-crew="' + cr.id + '"' + (m.h >= 3 ? ' disabled' : '') + '>+1 ' + img('heart') + '</button>';
   return '<article class="crew parch" id="crew-' + cr.id + '" style="--c:' + meta.color + '">' + head +
     '<div class="hearts">' + hearts + '</div>' +
-    '<div class="status" aria-label="Fées et têtes de mort">' + st + '</div>' +
+    '<div class="status' + (m.f || m.p ? '' : ' is-empty') + '" aria-label="Fées et têtes de mort">' + st + '</div>' +
     '<div class="score"><div class="tot">' + sum.total + ' <small>pts</small></div>' +
-      '<div class="meta"><span class="chip ' + chipCls(p) + '">' + signed(p) + ' aujourd’hui</span><span>objectif ' + sum.target + ' pts</span></div></div>' +
-    '<div class="acts">' + minus + plus + '</div>' +
+      '<div class="meta"><span>aujourd’hui</span><span class="chip ' + chipCls(p) + '" title="Points de la séance sur le trésor en jeu">' + signed(p) + ' / ' + stakeOf(s) + '</span><span>objectif ' + sum.target + ' pts</span></div></div>' +
+    '<div class="btns"><div class="acts">' + minus + plus + '</div>' +
     '<div class="bonus"><button class="plank sm" data-act="fairy" data-crew="' + cr.id + '">' + img(meta.fairy) + 'Fée +' + S.settings.fairy + '</button>' +
-      '<button class="plank sm" data-act="unfairy" data-crew="' + cr.id + '"' + (m.f ? '' : ' disabled') + ' aria-label="Retirer une fée">− ' + img(meta.fairy) + '</button></div>' +
+      '<button class="plank sm" data-act="unfairy" data-crew="' + cr.id + '"' + (m.f ? '' : ' disabled') + ' aria-label="Retirer une fée">− ' + img(meta.fairy) + '</button></div></div>' +
     '</article>';
 }
 function repeatImg(k, n){ var s = ''; for (var i = 0; i < n; i++) s += img(k); return s; }
@@ -664,7 +780,7 @@ function mutate(crewId, fn, fx){
   if (typeof res === 'string') fx = res;
   undoStack.push({cls:c.id, sess:s.id, crew:crewId, mark:before});
   if (undoStack.length > 60) undoStack.shift();
-  var delta = pts(m) - pts(before);
+  var delta = pts(m, s) - pts(before, s);
   save(); refreshCard(crewId, fx, delta);
   if (fx) beep(fx);
 }
@@ -684,6 +800,159 @@ function refreshCard(crewId, fx, delta){
     setTimeout(function(){ if (f.parentNode) f.parentNode.removeChild(f); }, 1200);
   }
   var u = document.querySelector('[data-act="undo"]'); if (u) u.disabled = !undoStack.length;
+}
+
+function openStake(){
+  var s = sess(), cur = stakeOf(s), def = maxPts();
+  var opts = [3, 5, 8, 10, 15, 20];
+  if (opts.indexOf(def) < 0) opts.unshift(def);
+  var chips = opts.map(function(v){
+    return '<button class="stakechip" data-act="pickStake" data-v="' + v + '" aria-pressed="' + (v === cur) + '">' + v + '<small>' + (v === def ? 'normal' : (v > def ? 'séance bonus' : 'séance légère')) + '</small></button>';
+  }).join('');
+  var prev = [3,2,1,0].map(function(h){ return '<span>' + repeatImg('heart', h) + repeatImg('heartDark', 3 - h) + ' <b>' + heartPts(h, s) + '</b></span>'; }).join('');
+  openModal('<h2>' + img('chest') + 'Trésor en jeu · séance ' + s.n + '</h2>' +
+    '<p style="margin-top:-4px">Points que les équipages peuvent gagner avec leurs 3 cœurs pendant cette séance. Les cœurs perdus retirent une part proportionnelle ; les fées (+' + S.settings.fairy + ') et les têtes de mort (−1) ne changent pas.</p>' +
+    '<div class="stakechips">' + chips + '</div>' +
+    '<div class="row" style="margin-top:12px"><label class="field">Autre valeur<input id="stakeIn" type="number" inputmode="numeric" min="1" max="100" value="' + cur + '"></label>' +
+    '<button class="plank sm green" data-act="stakeCustom">Valider</button></div>' +
+    '<div class="stakeprev"><b>Barème de cette séance :</b>' + prev + '</div>', true);
+}
+function openChest(){
+  var c = cls(), list = chestSessions(c), tot = stakeSum(list), from = c.chestFrom || 1;
+  var rows = c.crews.map(function(cr){
+    var r = crewSum(list, cr), pct = tot ? Math.max(0, Math.min(100, Math.round(r.total / tot * 100))) : 0;
+    return '<div class="chestrow">' + img('flag' + cr.ship) + '<span class="nm">' + esc(cr.name) + '</span>' +
+      '<span class="bar"><i style="width:' + pct + '%;background:' + shipMeta(cr.ship).color + '"></i></span><b>' + r.total + ' / ' + tot + '</b></div>';
+  }).join('');
+  var info = list.length
+    ? list.length + ' séance' + (list.length > 1 ? 's' : '') + ' (S' + list[0].n + (list.length > 1 ? ' à S' + list[list.length - 1].n : '') + ')'
+    : 'aucune séance pour l’instant : il se remplira à la prochaine';
+  openModal('<h2>' + img('gems') + 'Coffre de ' + esc(c.name) + '</h2>' +
+    '<div class="chestbig">' + img('chest') + '<div><b>' + tot + ' pts</b><span>mis en jeu depuis la séance ' + from + (c.chestDate ? ' · remis à zéro le ' + fmtDate(c.chestDate) : '') + '</span><span>' + info + '</span></div></div>' +
+    '<p style="margin:12px 0 8px">Chaque séance ajoute son trésor en jeu au coffre. Voici ce que chaque équipage a récupéré sur cette période :</p>' +
+    (list.length ? rows : '') +
+    '<div class="btnrow" style="margin-top:16px">' +
+      '<button class="plank red" data-act="chestReset" data-mode="next">Vider le coffre</button>' +
+      '<button class="plank sm" data-act="chestReset" data-mode="here">Compter à partir de la séance ' + sess().n + '</button>' +
+      (c.chestFrom ? '<button class="plank sm" data-act="chestAll">Tout recompter depuis S1</button>' : '') +
+    '</div><p class="note">« Vider le coffre » le remet à 0 : seules les séances suivantes s’y ajouteront. Les scores des équipages ne sont jamais effacés.</p>');
+}
+function setStake(v){
+  var s = sess();
+  if (v === maxPts()) delete s.stake; else s.stake = v;
+  save(); closeModal(); render(); toast('Trésor en jeu : ' + v + ' pts pour la séance ' + s.n);
+}
+
+/* CLOSURE (bilan) */
+var CRIT = ['Spoke English with my group','Listened and respected the others’ ideas','Shared my ideas','Did my part of the work and my role','Stayed focused on the task','Helped a classmate who needed it','Used my resources','Respected the time and the instructions'];
+var CRIT_FR = ['A parlé anglais avec le groupe','A écouté et respecté les idées','A proposé ses idées','A fait sa part et tenu son rôle','Est resté concentré','A aidé un camarade','A utilisé ses outils','A respecté le temps et les consignes'];
+var ROLES = ['Leader','Time-keeper','Secretary','Spokesperson','Checker'];
+var LEVELS = [['difficult','difficile'],['ok','moyen'],['good','bien'],['excellent','excellent']];
+function fmtN(x){ return (Math.round(x * 10) / 10).toString().replace('.', ','); }
+function closureOf(c, k){
+  if (!c.closures) c.closures = {};
+  if (!c.closures[k]) c.closures[k] = {crews:{}};
+  return c.closures[k];
+}
+function closureCrew(c, k, crewId){
+  var cl = closureOf(c, k);
+  if (!cl.crews[crewId]){
+    var cr = findBy(c.crews, 'id', crewId);
+    cl.crews[crewId] = {level:'', comment:'', members:((cr && cr.members) || []).map(function(m){ return {id:m.id, name:m.name, role:'', total:null}; })};
+  }
+  return cl.crews[crewId];
+}
+function closureMember(c, k, crewId, mid){ return findBy(closureCrew(c, k, crewId).members, 'id', mid); }
+function groupPart(r){
+  var st = S.settings, w = st.noteMax * st.groupShare / 100;
+  if (!r.target) return 0;
+  return w * Math.max(0, Math.min(1, r.total / r.target));
+}
+function finalNote(r, total32){
+  if (total32 == null || total32 === '' || isNaN(total32)) return null;
+  var st = S.settings, w = st.noteMax * (100 - st.groupShare) / 100;
+  return Math.round((groupPart(r) + w * Math.max(0, Math.min(32, total32)) / 32) * 2) / 2;
+}
+function closeView(c, k, list){
+  var L = S.settings.cycle, st = S.settings;
+  var html = '<div class="closehead"><p>' + (list.length < L ? '⚠️ Ce bilan n’est pas terminé (' + list.length + '/' + L + ' séances). Tu peux déjà commencer la saisie, la part « groupe » se mettra à jour. ' : '') +
+    'Note finale sur ' + st.noteMax + ' : ' + fmtN(st.noteMax * st.groupShare / 100) + ' pts pour les points de l’équipage + ' + fmtN(st.noteMax * (100 - st.groupShare) / 100) + ' pts pour l’auto-évaluation /32 de chaque élève (réglable dans Paramètres).</p>' +
+    '<button class="plank sm" data-act="clExport">Exporter les notes (.csv)</button></div>';
+  c.crews.forEach(function(cr){ html += '<div id="close-' + cr.id + '">' + closeCrewHTML(c, k, list, cr) + '</div>'; });
+  return html;
+}
+function closeCrewHTML(c, k, list, cr){
+  var cl = closureCrew(c, k, cr.id), r = crewSum(list, cr), gp = groupPart(r), st = S.settings;
+  var lv = LEVELS.map(function(l){ return '<button data-act="clLevel" data-crew="' + cr.id + '" data-v="' + l[0] + '" aria-pressed="' + (cl.level === l[0]) + '">' + l[1] + '</button>'; }).join('');
+  var rows = cl.members.map(function(m){
+    var fn = finalNote(r, m.total), open = ui.clOpen === cr.id + ':' + m.id;
+    var roles = '<option value="">—</option>' + ROLES.map(function(ro){ return '<option' + (m.role === ro ? ' selected' : '') + '>' + ro + '</option>'; }).join('');
+    var row = '<tr><td><input class="clin" data-cl="name" data-crew="' + cr.id + '" data-mid="' + m.id + '" value="' + esc(m.name) + '" placeholder="Prénom" maxlength="24"></td>' +
+      '<td><select class="clin" data-cl="role" data-crew="' + cr.id + '" data-mid="' + m.id + '">' + roles + '</select></td>' +
+      '<td class="nowrap"><input class="clin num" type="number" inputmode="numeric" min="8" max="32" data-cl="total" data-crew="' + cr.id + '" data-mid="' + m.id + '" value="' + (m.total == null ? '' : m.total) + '"> /32 ' +
+        '<button class="mini-btn" data-act="clDetail" data-crew="' + cr.id + '" data-mid="' + m.id + '" aria-expanded="' + open + '">' + (open ? 'Fermer' : 'Détail') + '</button></td>' +
+      '<td class="fin" id="fin-' + m.id + '">' + (fn == null ? '—' : fmtN(fn) + '<small>/' + st.noteMax + '</small>') + '</td>' +
+      '<td><button class="mini-btn del" data-act="clDel" data-crew="' + cr.id + '" data-mid="' + m.id + '" aria-label="Retirer cet élève">✕</button></td></tr>';
+    if (open){
+      var sc = m.scores || [0,0,0,0,0,0,0,0];
+      row += '<tr class="detail"><td colspan="5"><div class="crit">' + CRIT.map(function(q, qi){
+        var b = ''; for (var v = 1; v <= 4; v++) b += '<button data-act="clScore" data-crew="' + cr.id + '" data-mid="' + m.id + '" data-q="' + qi + '" data-v="' + v + '" aria-pressed="' + (sc[qi] === v) + '">' + v + '</button>';
+        return '<div class="q"><span><b>' + esc(q) + '</b><small>' + esc(CRIT_FR[qi]) + '</small></span><span class="seg">' + b + '</span></div>';
+      }).join('') + '</div><label class="field" style="margin-top:8px">Next time, I will…<input class="clin" data-cl="goal" data-crew="' + cr.id + '" data-mid="' + m.id + '" value="' + esc(m.goal || '') + '" maxlength="120"></label></td></tr>';
+    }
+    return row;
+  }).join('');
+  var hasRoster = (findBy(c.crews, 'id', cr.id).members || []).length;
+  return '<article class="closecrew" style="--c:' + shipMeta(cr.ship).color + '">' +
+    '<header>' + img('flag' + cr.ship) + '<h3>' + esc(cr.name) + '</h3>' +
+      '<span class="gp"><b>' + r.total + '</b> / ' + r.target + ' pts → <b>' + fmtN(gp) + '</b> / ' + fmtN(st.noteMax * st.groupShare / 100) + ' pour tout le groupe</span></header>' +
+    '<div class="lvl"><span>Our teamwork was :</span>' + lv + '</div>' +
+    (cl.members.length ? '<div class="tablewrap"><table class="cltab"><thead><tr><th>Élève</th><th>Rôle</th><th>Auto-évaluation</th><th>Note</th><th></th></tr></thead><tbody>' + rows + '</tbody></table></div>'
+      : '<p class="note">Aucun élève pour ce bilan. Ajoute-les ici ou dans « Mes classes » (roue dentée de la classe).</p>') +
+    '<div class="btnrow"><button class="plank sm" data-act="clAdd" data-crew="' + cr.id + '"' + (cl.members.length >= 8 ? ' disabled' : '') + '>+ Élève</button>' +
+      (hasRoster ? '<button class="plank sm metal" data-act="clReload" data-crew="' + cr.id + '">Reprendre les membres de l’équipage</button>' : '') + '</div>' +
+    '<label class="field" style="margin-top:8px">Teacher’s comment<textarea class="clin" rows="2" data-cl="comment" data-crew="' + cr.id + '" maxlength="400">' + esc(cl.comment || '') + '</textarea></label>' +
+    '</article>';
+}
+function redrawCloseCrew(crewId){
+  var c = cls(), k = ui.cycle, el = document.getElementById('close-' + crewId), cr = findBy(c.crews, 'id', crewId);
+  if (!el || !cr || k === 'all'){ render(); return; }
+  el.innerHTML = closeCrewHTML(c, k, cycleSessions(c, k), cr);
+}
+function onCloseInput(e){
+  var t = e.target, f = t.getAttribute && t.getAttribute('data-cl'); if (!f) return;
+  var c = cls(), k = ui.cycle, crewId = t.getAttribute('data-crew');
+  if (k === 'all' || k == null) return;
+  if (f === 'comment'){ closureCrew(c, k, crewId).comment = t.value; save(); return; }
+  var m = closureMember(c, k, crewId, t.getAttribute('data-mid')); if (!m) return;
+  if (f === 'total'){
+    var v = parseInt(t.value, 10); m.total = isNaN(v) ? null : Math.max(0, Math.min(32, v));
+    var cr = findBy(c.crews, 'id', crewId), fn = finalNote(crewSum(cycleSessions(c, k), cr), m.total);
+    var cell = document.getElementById('fin-' + m.id); if (cell) cell.innerHTML = fn == null ? '—' : fmtN(fn) + '<small>/' + S.settings.noteMax + '</small>';
+  } else m[f] = t.value;
+  save();
+}
+document.addEventListener('input', onCloseInput);
+document.addEventListener('change', onCloseInput);
+function csvCell(v){ v = String(v == null ? '' : v); return /[;"\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
+function exportClosure(){
+  var c = cls(), k = ui.cycle; if (k === 'all') return;
+  var list = cycleSessions(c, k), st = S.settings;
+  var lines = [['Classe','Bilan','Équipage','Élève','Rôle','Points équipage','Objectif','Part groupe /' + fmtN(st.noteMax * st.groupShare / 100),'Auto-évaluation /32','Note /' + st.noteMax,'Travail d’équipe','Objectif élève','Commentaire'].map(csvCell).join(';')];
+  c.crews.forEach(function(cr){
+    var cl = closureCrew(c, k, cr.id), r = crewSum(list, cr), lvl = '';
+    LEVELS.forEach(function(l){ if (l[0] === cl.level) lvl = l[1]; });
+    cl.members.forEach(function(m){
+      var fn = finalNote(r, m.total);
+      lines.push([c.name, 'Bilan ' + (k + 1), cr.name, m.name, m.role, r.total, r.target, fmtN(groupPart(r)), m.total == null ? '' : m.total, fn == null ? '' : fmtN(fn), lvl, m.goal || '', cl.comment || ''].map(csvCell).join(';'));
+    });
+  });
+  var blob = new Blob(['\ufeff' + lines.join('\r\n')], {type:'text/csv;charset=utf-8'});
+  var name = 'class-quest-' + c.name.replace(/[^\w-]+/g, '_') + '-bilan' + (k + 1) + '.csv';
+  if (window.navigator && window.navigator.msSaveBlob){ window.navigator.msSaveBlob(blob, name); return; }
+  var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); setTimeout(function(){ URL.revokeObjectURL(a.href); a.parentNode.removeChild(a); }, 800);
+  toast('Notes exportées');
 }
 
 /* CLASSES */
@@ -712,7 +981,8 @@ function drawEditor(){
     var flags = '';
     for (var k = 1; k <= 8; k++) flags += '<button data-act="pickShip" data-i="' + i + '" data-ship="' + k + '" aria-pressed="' + (cr.ship === k) + '" aria-label="' + shipMeta(k).label + '">' + img('flag' + k) + '</button>';
     return '<div class="crewedit">' + img('ship' + cr.ship, 'prev') +
-      '<div><label class="field">Nom de l’équipage<input data-crewname="' + i + '" maxlength="24" value="' + esc(cr.name) + '"></label><div class="flags">' + flags + '</div></div>' +
+      '<div><label class="field">Nom de l’équipage<input data-crewname="' + i + '" maxlength="24" value="' + esc(cr.name) + '"></label><div class="flags">' + flags + '</div>' +
+      '<label class="field" style="margin-top:8px">Membres (un prénom par ligne, facultatif)<textarea data-crewmembers="' + i + '" rows="3" placeholder="Prénom 1&#10;Prénom 2">' + esc((cr.members || []).map(function(m){ return m.name; }).join('\n')) + '</textarea></label></div>' +
       '<button class="medal del" data-act="delCrew" data-i="' + i + '" aria-label="Supprimer cet équipage" title="Supprimer cet équipage">' + img('icTrash') + '</button></div>';
   }).join('');
   var isl = ['island','dock','palms','sign'].map(function(k, i){
@@ -731,6 +1001,15 @@ function syncDraftInputs(){
   var n = document.getElementById('clsName'); if (n) draft.name = n.value;
   var ins = document.querySelectorAll('[data-crewname]');
   for (var i = 0; i < ins.length; i++) draft.crews[+ins[i].getAttribute('data-crewname')].name = ins[i].value;
+  var tas = document.querySelectorAll('[data-crewmembers]');
+  for (var k = 0; k < tas.length; k++){
+    var cr = draft.crews[+tas[k].getAttribute('data-crewmembers')], old = cr.members || [], names = tas[k].value.split(/\n/);
+    cr.members = [];
+    names.forEach(function(nm){
+      nm = nm.replace(/^\s+|\s+$/g, ''); if (!nm) return;
+      var ex = findBy(old, 'name', nm); cr.members.push({id:ex ? ex.id : uid(), name:nm});
+    });
+  }
 }
 
 /* SCORES */
@@ -745,11 +1024,13 @@ function renderScores(){
     cyc += '<button data-act="cycle" data-k="' + k + '" aria-pressed="' + (K === k) + '">Bilan ' + (k + 1) + ' · séances ' + a + (b > a ? '–' + b : '') + '</button>';
   }
   cyc += '<button data-act="cycle" data-k="all" aria-pressed="' + (K === 'all') + '">Toute l’année</button></div>';
-  var tabs = [['race','Course au trésor'],['table','Tableau des séances'],['chart','Courbes']].map(function(t){
+  if (K === 'all' && ui.scoreTab === 'close') ui.scoreTab = 'race';
+  var tabs = [['race','Course au trésor'],['table','Tableau des séances'],['chart','Courbes'],['close','Clôture du bilan']].map(function(t){
     return '<button class="tab" role="tab" data-act="scoreTab" data-t="' + t[0] + '" aria-selected="' + (ui.scoreTab === t[0]) + '">' + t[1] + '</button>';
   }).join('');
   var list = cycleSessions(c, K), body;
-  if (ui.scoreTab === 'table') body = scoreTable(c, list);
+  if (ui.scoreTab === 'close') body = (K === 'all') ? '<p>Choisis un bilan précis pour le clôturer.</p>' : closeView(c, K, list);
+  else if (ui.scoreTab === 'table') body = scoreTable(c, list);
   else if (ui.scoreTab === 'chart') body = scoreChart(c, list);
   else body = race(c, list, K);
   return '<section class="parch panel"><h2>' + img('icChart') + esc(c.name) + '</h2>' +
@@ -757,7 +1038,7 @@ function renderScores(){
 }
 function race(c, list, K){
   var full = K === 'all' ? list.length : S.settings.cycle;
-  var finalTarget = full * maxPts(), played = list.length;
+  var played = list.length, finalTarget = stakeSum(list) + Math.max(0, full - played) * maxPts();
   if (!finalTarget) return '<p>Aucune séance.</p>';
   var html = '<div class="race">';
   c.crews.forEach(function(cr, li){
@@ -770,13 +1051,13 @@ function race(c, list, K){
       (played < full ? '<div class="buoy" style="left:' + buoy + '%">' + (li === c.crews.length - 1 ? '<span>à ce jour</span>' : '') + '</div>' : '') +
       '<div class="boat" style="left:' + left + '%"><b>' + r.total + ' pts</b>' + img('ship' + cr.ship) + '</div></div></div>';
   });
-  html += '</div><p class="note">Le coffre marque l’objectif du bilan : ' + full + ' séances × ' + maxPts() + ' pts = ' + finalTarget + ' pts. ' +
-    (played < full ? 'La ligne jaune indique l’objectif après ' + played + ' séance' + (played > 1 ? 's' : '') + ' (' + played * maxPts() + ' pts). ' : '') +
+  html += '</div><p class="note">Le coffre marque l’objectif du bilan : ' + finalTarget + ' pts sur ' + full + ' séances (trésor en jeu de chaque séance' + (played < full ? ', ' + maxPts() + ' pts par séance à venir' : '') + '). ' +
+    (played < full ? 'La ligne jaune indique l’objectif après ' + played + ' séance' + (played > 1 ? 's' : '') + ' (' + stakeSum(list) + ' pts). ' : '') +
     'Touche un équipage pour voir son journal de bord.</p>';
   return html;
 }
 function scoreTable(c, list){
-  var head = '<tr><th>Équipage</th>' + list.map(function(s){ return '<th>S' + s.n + '</th>'; }).join('') + '<th>Total</th><th>Objectif</th><th>Écart</th></tr>';
+  var head = '<tr><th>Équipage</th>' + list.map(function(s){ return '<th>S' + s.n + '<br><small style="font-family:var(--body);font-weight:900;font-size:.72rem;color:#8a6a45">' + stakeOf(s) + ' en jeu</small></th>'; }).join('') + '<th>Total</th><th>Objectif</th><th>Écart</th></tr>';
   var rows = c.crews.map(function(cr){
     var r = crewSum(list, cr), gap = r.total - r.target;
     return '<tr><th><button class="crewcell" data-act="crewDetail" data-crew="' + cr.id + '">' + img('flag' + cr.ship) + esc(cr.name) + '</button></th>' +
@@ -785,7 +1066,7 @@ function scoreTable(c, list){
         var ic = '';
         if (m.f) ic += repeatImg(shipMeta(cr.ship).fairy, Math.min(m.f, 3));
         if (m.p) ic += repeatImg('skull', m.p);
-        return '<td><button class="cellbtn" data-act="openSess" data-id="' + s.id + '" title="Ouvrir la séance ' + s.n + '"><span class="mini"><span class="chip ' + chipCls(pts(m)) + '">' + signed(pts(m)) + '</span>' +
+        return '<td><button class="cellbtn" data-act="openSess" data-id="' + s.id + '" title="Ouvrir la séance ' + s.n + '"><span class="mini"><span class="chip ' + chipCls(pts(m, s)) + '">' + signed(pts(m, s)) + '</span>' +
           '<span class="ic">' + repeatImg('heart', m.h) + repeatImg('heartDark', 3 - m.h) + '</span>' + (ic ? '<span class="ic">' + ic + '</span>' : '') + '</span></button></td>';
       }).join('') +
       '<td style="font-size:1.15rem">' + r.total + '</td><td>' + r.target + '</td><td class="gap ' + (gap >= 0 ? 'pos' : 'neg') + '">' + signed(gap) + '</td></tr>';
@@ -800,10 +1081,10 @@ function chartSVG(c, list, crews, opts){
   var n = list.length; if (!n) return '';
   var series = crews.map(function(cr){
     var cum = 0, pts_ = [];
-    list.forEach(function(s){ var m = s.marks[cr.id]; if (m) cum += pts(m); pts_.push(cum); });
+    list.forEach(function(s){ var m = s.marks[cr.id]; if (m) cum += pts(m, s); pts_.push(cum); });
     return {cr:cr, vals:pts_};
   });
-  var maxV = n * maxPts(), minV = 0;
+  var maxV = stakeSum(list), minV = 0;
   series.forEach(function(se){ se.vals.forEach(function(v){ if (v > maxV) maxV = v; if (v < minV) minV = v; }); });
   maxV = Math.ceil(maxV / 10) * 10 || 10;
   function X(i){ return pl + (n === 1 ? (W - pl - pr) / 2 : i * (W - pl - pr) / (n - 1)); }
@@ -815,7 +1096,7 @@ function chartSVG(c, list, crews, opts){
       '<text x="' + (pl - 8) + '" y="' + (Y(v) + 4) + '" text-anchor="end" font-size="12" font-weight="800" fill="#6e4b2a">' + v + '</text>';
   }
   list.forEach(function(s, i){ g += '<text x="' + X(i) + '" y="' + (H - 10) + '" text-anchor="middle" font-size="12" font-weight="800" fill="#6e4b2a">S' + s.n + '</text>'; });
-  var obj = list.map(function(s, i){ return X(i) + ',' + Y((i + 1) * maxPts()); }).join(' ');
+  var acc = 0, obj = list.map(function(s, i){ acc += stakeOf(s); return X(i) + ',' + Y(acc); }).join(' ');
   g += '<polyline points="' + obj + '" fill="none" stroke="#c58b12" stroke-width="3" stroke-dasharray="7 6" />';
   series.forEach(function(se){
     var col = shipMeta(se.cr.ship).color; if (se.cr.ship === 1) col = '#a89670';
@@ -828,7 +1109,7 @@ function chartSVG(c, list, crews, opts){
 function scoreChart(c, list){
   var leg = c.crews.map(function(cr){ var col = shipMeta(cr.ship).color; if (cr.ship === 1) col = '#a89670'; return '<span><i style="background:' + col + '"></i>' + esc(cr.name) + '</span>'; }).join('') +
     '<span><i style="background:repeating-linear-gradient(90deg,#c58b12 0 6px,transparent 6px 10px)"></i>Objectif</span>';
-  return chartSVG(c, list, c.crews) + '<div class="legend">' + leg + '</div><p class="note">Points cumulés séance après séance, comparés à l’objectif de ' + maxPts() + ' pts par séance.</p>';
+  return chartSVG(c, list, c.crews) + '<div class="legend">' + leg + '</div><p class="note">Points cumulés séance après séance, comparés à l’objectif (somme des trésors mis en jeu à chaque séance).</p>';
 }
 function crewDetail(crewId){
   var c = cls(), cr = findBy(c.crews, 'id', crewId); if (!cr) return;
@@ -836,10 +1117,10 @@ function crewDetail(crewId){
   var list = cycleSessions(c, K), r = crewSum(list, cr), cum = 0, rows = '';
   list.forEach(function(s){
     var m = s.marks[cr.id]; if (!m){ rows += '<tr><td>Séance ' + s.n + '</td><td colspan="3">absent</td></tr>'; return; }
-    cum += pts(m);
+    cum += pts(m, s);
     rows += '<tr><td>Séance ' + s.n + (s.date ? ' <small style="color:#8a6a45">' + fmtDate(s.date) + '</small>' : '') + '</td>' +
       '<td class="ic">' + repeatImg('heart', m.h) + repeatImg('heartDark', 3 - m.h) + ' ' + repeatImg(shipMeta(cr.ship).fairy, m.f) + repeatImg('skull', m.p) + '</td>' +
-      '<td><span class="chip ' + chipCls(pts(m)) + '">' + signed(pts(m)) + '</span></td><td>' + cum + '</td></tr>';
+      '<td><span class="chip ' + chipCls(pts(m, s)) + '">' + signed(pts(m, s)) + '</span></td><td>' + cum + '</td></tr>';
   });
   openModal('<h2>' + img('ship' + cr.ship) + esc(cr.name) + ' · ' + r.total + ' pts</h2>' +
     '<p style="margin-top:-6px">' + (K === 'all' ? 'Toute l’année' : 'Bilan ' + (K + 1)) + ' · objectif à ce jour ' + r.target + ' pts · ' + badgeCount(c, cr) + ' badge(s)</p>' +
@@ -888,6 +1169,10 @@ function renderSettings(){
       '<label class="field">Séances par bilan' + num('sCycle', st.cycle, 2, 40) + '</label></div>' +
     '<div class="row" style="margin-top:14px;justify-content:space-between;align-items:center"><label class="toggle"><input type="checkbox" id="sSound"' + (st.sound ? ' checked' : '') + '> Petits sons à chaque action</label>' +
     '<button class="plank green" data-act="saveSettings">Enregistrer le barème</button></div></section>' +
+    '<section class="parch panel"><h2>' + img('icTarget') + 'Note finale (clôture du bilan)</h2>' +
+    '<div class="row"><label class="field">Note sur' + num('sNoteMax', st.noteMax, 5, 100) + '</label>' +
+      '<label class="field">Part des points du groupe (%)' + num('sShare', st.groupShare, 0, 100) + '</label></div>' +
+    '<p class="note">Avec ' + st.groupShare + ' %, une note sur ' + st.noteMax + ' = ' + fmtN(st.noteMax * st.groupShare / 100) + ' pts pour les points de l’équipage (rapportés à l’objectif du bilan) + ' + fmtN(st.noteMax * (100 - st.groupShare) / 100) + ' pts pour l’auto-évaluation individuelle sur 32. Pense à cliquer sur « Enregistrer le barème ».</p></section>' +
     '<section class="parch panel"><h2>' + img('chest2') + 'Sauvegardes</h2>' +
     '<p style="margin-top:0">Les données restent dans ce navigateur. Exporte régulièrement un fichier de sauvegarde, surtout avant de changer d’ordinateur.</p>' +
     '<div class="btnrow"><button class="plank" data-act="export">Exporter (.json)</button><button class="plank" data-act="import">Importer</button>' +
@@ -897,7 +1182,8 @@ function renderSettings(){
 function rule(ics, label, val){ return '<div class="rule"><span class="ics">' + ics + '</span><span>' + esc(label) + '</span><b>' + signed(val) + ' pt' + (Math.abs(val) > 1 ? 's' : '') + '</b></div>'; }
 
 function demoClass(){
-  var c = {id:uid(), name:'Démo 5e B', island:1, crews:CFG.defaultCrews.map(function(d){ return {id:uid(), name:d.name, ship:d.ship}; }), sessions:[]};
+  var roster = [['Lina','Hugo','Inès','Nathan','Jade'],['Léo','Chloé','Adam','Manon'],['Sacha','Emma','Rayan','Lou','Tom'],['Zoé','Noah','Lily','Yanis']];
+  var c = {id:uid(), name:'Démo 5e B', island:1, crews:CFG.defaultCrews.map(function(d, i){ return {id:uid(), name:d.name, ship:d.ship, members:roster[i].map(function(n){ return {id:uid(), name:n}; })}; }), sessions:[]};
   var data = [
     [[2,0,0],[2,1,0],[1,0,0],[3,0,0]],
     [[3,0,0],[2,0,0],[0,0,1],[3,1,0]],
@@ -911,6 +1197,7 @@ function demoClass(){
     var dt = new Date(d0.getTime() + i * 7 * 864e5);
     var s = {id:uid(), n:i + 1, date:dt.getFullYear() + '-' + pad(dt.getMonth() + 1) + '-' + pad(dt.getDate()), marks:{}};
     c.crews.forEach(function(cr, j){ s.marks[cr.id] = {h:row[j][0], f:row[j][1], p:row[j][2]}; });
+    if (i === 3) s.stake = 10;
     c.sessions.push(s);
   });
   return c;
@@ -967,6 +1254,35 @@ document.addEventListener('click', function(e){
       }, null); break;
     case 'fairy': mutate(crew, function(m){ m.f++; }, 'fairy'); break;
     case 'unfairy': mutate(crew, function(m){ if (!m.f) return false; m.f--; }, 'lose'); break;
+    case 'stake': openStake(); break;
+    case 'clLevel': var cl1 = closureCrew(cls(), ui.cycle, crew); cl1.level = cl1.level === t.getAttribute('data-v') ? '' : t.getAttribute('data-v'); save(); redrawCloseCrew(crew); break;
+    case 'clDetail': var key = crew + ':' + t.getAttribute('data-mid'); ui.clOpen = ui.clOpen === key ? null : key; redrawCloseCrew(crew); break;
+    case 'clScore':
+      var cm = closureMember(cls(), ui.cycle, crew, t.getAttribute('data-mid')); if (!cm) break;
+      if (!cm.scores) cm.scores = [0,0,0,0,0,0,0,0];
+      var qi = +t.getAttribute('data-q'), qv = +t.getAttribute('data-v');
+      cm.scores[qi] = cm.scores[qi] === qv ? 0 : qv;
+      var allSet = true, sumQ = 0; cm.scores.forEach(function(v){ if (!v) allSet = false; sumQ += v; });
+      cm.total = allSet ? sumQ : (sumQ ? sumQ : cm.total);
+      save(); redrawCloseCrew(crew); break;
+    case 'clAdd': var clc = closureCrew(cls(), ui.cycle, crew); clc.members.push({id:uid(), name:'', role:'', total:null}); save(); redrawCloseCrew(crew); break;
+    case 'clDel':
+      var cld = closureCrew(cls(), ui.cycle, crew), mi = idxBy(cld.members, 'id', t.getAttribute('data-mid'));
+      if (mi >= 0){ cld.members.splice(mi, 1); save(); redrawCloseCrew(crew); } break;
+    case 'clReload':
+      var clr = closureCrew(cls(), ui.cycle, crew), crr = findBy(cls().crews, 'id', crew);
+      (crr.members || []).forEach(function(m){ if (!findBy(clr.members, 'id', m.id) && !findBy(clr.members, 'name', m.name)) clr.members.push({id:m.id, name:m.name, role:'', total:null}); });
+      save(); redrawCloseCrew(crew); break;
+    case 'clExport': exportClosure(); break;
+    case 'chest': openChest(); break;
+    case 'chestReset':
+      c = cls(); var mode = t.getAttribute('data-mode');
+      c.chestFrom = mode === 'here' ? sess().n : c.sessions[c.sessions.length - 1].n + 1;
+      c.chestDate = todayISO(); save(); closeModal(); render();
+      toast(mode === 'here' ? 'Coffre recompté à partir de la séance ' + c.chestFrom : 'Coffre vidé : il se remplira à la prochaine séance'); break;
+    case 'chestAll': c = cls(); delete c.chestFrom; delete c.chestDate; save(); closeModal(); render(); toast('Coffre recompté depuis la première séance'); break;
+    case 'pickStake': setStake(+t.getAttribute('data-v')); break;
+    case 'stakeCustom': var sv = parseInt(document.getElementById('stakeIn').value, 10); if (isNaN(sv) || sv < 1 || sv > 100){ toast('Choisis un nombre entre 1 et 100'); break; } setStake(sv); break;
     case 'joinSess': s = sess(); s.marks[crew] = {h:3, f:0, p:0}; save(); render(); break;
     case 'undo':
       var u = undoStack.pop(); if (!u) break;
@@ -1018,6 +1334,7 @@ document.addEventListener('click', function(e){
       st.base = [gv('b0', 0), gv('b1', 1), gv('b2', 3), gv('b3', 5)];
       st.fairy = Math.max(0, gv('sFairy', 1)); st.maxSkulls = Math.max(1, Math.min(5, gv('sSkulls', 2)));
       st.cycle = Math.max(2, Math.min(40, gv('sCycle', 10))); st.sound = document.getElementById('sSound').checked;
+      st.noteMax = Math.max(5, Math.min(100, gv('sNoteMax', 20))); st.groupShare = Math.max(0, Math.min(100, gv('sShare', 50)));
       S.classes.forEach(function(cc){ cc.sessions.forEach(function(ss){ for (var k in ss.marks){ if (ss.marks[k].p > st.maxSkulls) ss.marks[k].p = st.maxSkulls; } }); });
       ui.cycle = null; render(); toast('Barème enregistré'); break;
     case 'export': exportData(); break;
