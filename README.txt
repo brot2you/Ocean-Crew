@@ -1,5 +1,5 @@
-OCEAN CREW V2 PREMIUM — BROT2YOU
-Ouvrez index.html dans un navigateur. Aucun serveur nécessaire.
-Les images PNG individuelles proviennent de la planche fournie.
-Les données restent en local, exportez régulièrement vos sauvegardes JSON.
-La V2 conserve la clé de sauvegarde V1 sur le même navigateur et la même origine.
+OCEAN CREW — V3 PREMIUM
+Ouvrir index.html dans un navigateur ou déposer l'ensemble du dossier sur GitHub Pages.
+Les données de la V1/V2 sont conservées grâce à la même clé de stockage local.
+Les illustrations sont stockées dans assets/ et restent entièrement visibles avec object-fit: contain.
+Faire régulièrement un export JSON de sauvegarde.
